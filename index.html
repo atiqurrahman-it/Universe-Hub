@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/cdac01df3a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>AI Universe Hub</title>
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css" />
+    <!-- custom style  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="text-center">
+        <h1 class="my-3">AI Universe Hub</h1>
+        <button
+          id="SortByDataBtn"
+          class="btn btn-warning py-2 px-3 rounded-2 d-none"
+        >
+          Sort By Date
+        </button>
+      </section>
+
+      <section class="container mt-4">
+        <div id="cardContainer" class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+          <!-- show card form api  -->
+        </div>
+      </section>
+    </main>
+
+    <!-- show all button  -->
+    <section>
+      <div id="showBtnContainer" class="container my-4 text-center d-none">
+        <button id="showBtn" class="btn btn-warning px-2 py-1">Show All</button>
+      </div>
+    </section>
+    <!-- loading Spinners show -->
+    <section>
+      <div
+        id="loadingSpinner"
+        class="d-flex justify-content-center d-none mt-4"
+      >
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="itemNotfound" class="container text-center d-none">
+        <h3 class="display-1 fw-bold mt-3">404</h3>
+        <p class="fs-3">
+          <span class="text-danger">Opps!</span> Food not Found.
+        </p>
+      </div>
+    </section>
+
+    <!-- modal -->
+
+    <div
+      class="modal fade"
+      id="universeModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <button
+            style="
+              margin: -15px;
+              background-color: #ff0217;
+              padding: 9px;
+              opacity: 1;
+              border-radius: 50%;
+            "
+            type="button"
+            class="btn-close ms-auto btn-close-black"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div
+                id="universeModalContainer"
+                class="row row-cols-1 row-cols-md-2 g-4"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap js file  -->
+    <script src="resource/js/bootstrap.min.js"></script>
+    <!-- custom js file  -->
+    <script src="utility.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
